@@ -1,0 +1,16 @@
+
+<div class="row mt-4">
+    <div class="col-md-8 offset-4">
+     
+        <div class="card" style="width: 18rem;">
+            <img *ngIf="user.avatar"  [src]="user.avatar" class="card-img-top" [alt]="user.email">
+            <div class="card-body">
+              <app-loading *ngIf="!user.avatar" ></app-loading>
+              <h5 class="card-title">{{ user.first_name }} {{ user.last_name }}</h5>
+              <p class="card-text">{{ user.email }}</p>
+              <a routerLink='/users' class="btn btn-danger">Return back</a>
+            </div>
+          </div>
+      
+    </div>
+  </div>
